@@ -9,32 +9,21 @@ pipeline {
 
      stages {
 
-        stage('Instalando Yarn') {
+        stage('Build') {
             steps {
                 bat 'npm install -g yarn'
-            }
-        }
-
-        stage('Instalando Dependências') {
-            steps {
                 bat 'yarn install'
-            }
-
-        }
-
-        stage('Instalando Browsers do Playwright') {
-            steps {
                 bat 'yarn playwright install --with-deps'
             }
         }
 
-        stage('Executando testes unitários') {
+        stage('Unity Tests') {
             steps {
                 bat 'yarn run test'
             }
         }
 
-        stage('Executando testes E2E') {
+        stage('E2E Tests') {
             steps {
                 bat 'yarn run e2e'
             }
