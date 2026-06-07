@@ -35,6 +35,12 @@ pipeline {
             }
         }
 
+        stage('Executando testes unitários') {
+            steps {
+                bat 'yarn run test'
+            }
+        }
+
         stage('Executando testes E2E') {
             steps {
                 bat 'yarn run e2e'
