@@ -49,7 +49,7 @@ pipeline {
                 allowMissing: true,
                 alwaysLinkToLastBuild: true,
                 keepAll: true,
-                reportDir: 'report/coverage/lcov-report',
+                reportDir: 'reports/coverage/lcov-report',
                 reportFiles: 'index.html',
                 reportName: 'Unit Test Report'
             ])
@@ -58,7 +58,7 @@ pipeline {
                 allowMissing: true,
                 alwaysLinkToLastBuild: true,
                 keepAll: true,
-                reportDir: 'report/mutation',
+                reportDir: 'reports/mutation',
                 reportFiles: 'mutation.html',
                 reportName: 'Mutation Test Report'
             ])
